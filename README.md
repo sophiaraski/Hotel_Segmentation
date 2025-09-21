@@ -1,6 +1,8 @@
-# Hotel Customer Segmentation — Case 1 (Group R)
+# Hotel Customer Segmentation (Clustering) — Case 1
 
-A formal, reproducible implementation of **Hotel H** customer segmentation, developed as part of the *Master Degree Program in Data Science and Advanced Analytics* (MDSAA) — Business Cases with Data Science, Case 1. The project follows the **CRISP‑DM** lifecycle and delivers actionable customer segments and marketing recommendations for an independent hotel chain operating in Lisbon.
+Disclamer: the dataset used is real customer data provided by Hotel H (anonymized to remove personally identifiable information).
+
+Python implementation of **Hotel H** customer segmentation, developed as part of the *Master Degree Program in Data Science and Advanced Analytics* (MDSAA) — Business Cases with Data Science, Case 1. The project follows the **CRISP‑DM** lifecycle and delivers actionable customer segments and marketing recommendations for an independent hotel chain operating in Lisbon.
 
 > **Scope**: end‑to‑end notebook(s) and scripts for data understanding, preparation, modeling (K‑Means), evaluation, and business interpretation.
 
