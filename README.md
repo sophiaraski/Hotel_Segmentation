@@ -20,34 +20,7 @@ This repository operationalizes the analysis described in the accompanying repor
 
 ---
 
-## 2) Project Structure
-
-```
-.
-├── data/
-│   ├── raw/                # (not tracked) original CSVs/Parquet (PII excluded or anonymized)
-│   └── processed/          # (not tracked) intermediate artifacts
-├── notebooks/
-│   ├── 01_data_understanding.ipynb
-│   ├── 02_preparation.ipynb
-│   ├── 03_modeling_kmeans.ipynb
-│   ├── 04_evaluation_and_profiles.ipynb
-│   └── 05_business_actions.ipynb
-├── src/
-│   ├── features/           # transformations, binning, encoders, scalers
-│   ├── modeling/           # kmeans, pca, selection, metrics
-│   ├── utils/              # IO, plotting, config
-│   └── pipelines/          # orchestration (e.g., sklearn Pipeline)
-├── reports/
-│   └── Report Group R - Case 1.pdf
-├── requirements.txt
-├── LICENSE
-└── README.md
-```
-
----
-
-## 3) Methodology (CRISP‑DM Summary)
+## 2) Methodology (CRISP‑DM Summary)
 
 - **Business Understanding** — Improve segmentation beyond “sales origin” by integrating richer features; deliver segments for **targeted marketing** and **retention**.
 - **Data Understanding** — Profiles include demographics (age, nationality), booking and stay behavior (lead time, PersonNights/RoomNights, cancellations, no‑shows), channels, and special requests (e.g., bed type, quiet room).  
@@ -63,7 +36,7 @@ This repository operationalizes the analysis described in the accompanying repor
 
 ---
 
-## 4) Segmentation Output (Profiles)
+## 3) Segmentation Output (Profiles)
 
 The analysis yields **six segments**: five post‑hoc K‑Means clusters plus one *a priori* cluster for “services‑only” customers. Brief characterizations:
 
@@ -78,51 +51,7 @@ Each profile is paired with marketing **plays** (positioning, channels, offers, 
 
 ---
 
-## 5) Getting Started
-
-### Prerequisites
-- Python ≥ 3.10
-- `pip` or `uv`/`poetry`
-- (Optional) `make`
-
-### Installation
-```bash
-# clone your fork
-git clone https://github.com/<your-org>/<your-repo>.git
-cd <your-repo>
-
-# create & activate a virtual environment (example with venv)
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-
-# install dependencies
-pip install -r requirements.txt
-```
-
-### Environment
-Create a `.env` (or `config.yaml`) to point to your data locations:
-```ini
-DATA_DIR=./data
-RAW_DIR=${DATA_DIR}/raw
-PROCESSED_DIR=${DATA_DIR}/processed
-SEED=42
-```
-
-> **Data privacy**: Do **not** commit raw data or PII. Use anonymized hashes only (as in the report).
-
----
-
-
-**Option B — Pipeline (CLI)**
-```bash
-python -m src.pipelines.run   --raw ./data/raw/customers.csv   --out ./data/processed   --seed 42
-```
-
-Outputs include cluster assignments, centroids, diagnostics, and profile cards.
-
----
-
-## 7) Models & Features (Key Choices)
+## 4) Models & Features (Key Choices)
 
 - **Imputation**: KNN (k=3) for `Age`; domain‑based thresholds for outliers.  
 - **Engineering**: `Continent`, `TimeBetweenVisits`, `CheckInRatio`; equal‑frequency binning for `Age`, `AverageLeadTime`, `LodgingRevenue`, `OtherRevenue`.  
@@ -130,11 +59,9 @@ Outputs include cluster assignments, centroids, diagnostics, and profile cards.
 - **Clustering**: **K‑Means** (multiple `n_init`), *k* via **Elbow**; **silhouette** for separation.  
 - **Validation**: quantitative indices + qualitative marketing interpretability.
 
-> See in‑code docstrings and the notebooks for exact parameters and justifications.
-
 ---
 
-## 8) Business Application (Examples)
+## 5) Business Application (Examples)
 
 - **Cluster 1 (High Spenders)** — emphasize direct‑booking benefits, family‑friendly upgrades, and personalized offers; loyalty triggers (birthdays, room upgrades).  
 - **Cluster 0 (Youth)** — affordable, experiential bundles; social media/influencer partnerships; off‑season promotions.  
@@ -153,7 +80,7 @@ Outputs include cluster assignments, centroids, diagnostics, and profile cards.
 
 ---
 
-## 10) References
+## 6) References
  
 - Woungang, I., et al. (2023). *Advanced Network Technologies and Intelligent Computing*. Springer.  
 - Mauri, A. G. (2012). *Hotel Revenue Management: Principles and Practices*. Pearson Italia.  
@@ -166,7 +93,7 @@ for money. Current Issues in Tourism. Vol. 17, no. 1, p. 60–71. doi: 10.1080/1
 Study. Education Excellence and Innovation Management Through Vision 2020, p. 2113-2119.
 
 
-## 12) Acknowledgments
+## 7) Acknowledgments
 
-NOVA IMS — MDSAA, Faculty and colleagues, Group R contributors.
+NOVA IMS — MDSAA
 
