@@ -1,1 +1,1 @@
-# Hotel_Segmentation
+# Hotel Segmentation
