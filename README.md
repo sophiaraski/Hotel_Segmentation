@@ -71,7 +71,7 @@ Each profile is paired with marketing **plays** (positioning, channels, offers, 
 
 ---
 
-## 9) Limitations & Next Steps
+## 6) Limitations & Next Steps
 
 - Add **length‑of‑stay**, **family size**, **stay purpose** (business/leisure), and **satisfaction** to refine segments.  
 - Introduce **psychographic** factors (motivations, perceived experience).  
@@ -80,7 +80,7 @@ Each profile is paired with marketing **plays** (positioning, channels, offers, 
 
 ---
 
-## 6) References
+## 7) References
  
 - Woungang, I., et al. (2023). *Advanced Network Technologies and Intelligent Computing*. Springer.  
 - Mauri, A. G. (2012). *Hotel Revenue Management: Principles and Practices*. Pearson Italia.  
@@ -93,7 +93,7 @@ for money. Current Issues in Tourism. Vol. 17, no. 1, p. 60–71. doi: 10.1080/1
 Study. Education Excellence and Innovation Management Through Vision 2020, p. 2113-2119.
 
 
-## 7) Acknowledgments
+## 8) Acknowledgments
 
 NOVA IMS — MDSAA
 
